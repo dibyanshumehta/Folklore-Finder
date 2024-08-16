@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+}
+
+.logo{
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.3s;
+    
+}
+
+.navigation a:hover{
+    color: red;
+}
+
+.navigation .icon{
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+    right: -20px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.navigation .icon:hover{
+    color: red;
+}
+
+.feed{
+    background: transparent;
+    padding: 2rem;
+    max-width: 576px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 30px white;
+    text-align: center;
+}
+
+.feed h3{
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.rating{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: .5rem;
+    font-size: 2rem;
+    color: var(--yellow);
+    margin-bottom: 2rem;
+}
+
+.rating .star{
+    cursor: pointer;
+    color: white;
+}
+
+.rating .star.active{
+    opacity: 0;
+    animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+}
+
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.rating .star:hover{
+    color: red;
+    transform: scale(1.1);
+}
+
+textarea{
+    width: 100%;
+    background: var(--light);
+    padding: 1rem;
+    border-color: white;
+    border-radius: .5rem;
+    color: white;
+    border: none;
+    outline: red;
+    resize: none;
+    margin-bottom: .5rem;
+}
+
+.btn-group{
+    display: flex;
+    grid-gap: .5rem;
+    align-items: center;
+}
+
+.btn-group .btn{
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    border: color(white );
+    outline: none;
+    cursor: pointer;
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+.btn-group .btn.submit{
+    background: var(--blue);
+    color: white;
+}
+
+.btn-group .btn.submit:hover{
+    background: var(--blue-d-1);
+    color: red;
+
+}
+
+.btn-group .btn.cancel{
+    background: var(--white);
+    color: white;
+}
+
+.btn-group .btn.cancel:hover{
+    background: var(--light);
+    color: red;
+}
